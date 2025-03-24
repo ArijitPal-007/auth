@@ -1,7 +1,7 @@
 import express from "express"
 import jwt from "jsonwebtoken"
 
-const userAuth = async (req,resizeBy,next)=>{
+const userAuth = async (req,res,next)=>{
     const {token} = req.cookies
     if(!token){
         return res.json({msg:"not autheticated,Login again"})
